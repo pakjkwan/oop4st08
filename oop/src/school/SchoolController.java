@@ -14,8 +14,9 @@ import jdk.nashorn.internal.ir.WhileNode;
  * @story  :
 */
 public class SchoolController {
-	public static void main(String[] args) {
-		Student s = null;
+	public static void main(String[] args) { // String[] params
+		
+		Student stu = null;
 		while (true) {
 			switch (JOptionPane.showInputDialog("1등록 2조회 0종료")) {
 			case "1":
@@ -23,9 +24,11 @@ public class SchoolController {
 				String pw = JOptionPane.showInputDialog("PW");
 				String name = JOptionPane.showInputDialog("이름");
 				String ssn = JOptionPane.showInputDialog("주민번호");
-		//		s = new Student(id,pw,name,ssn);
+				stu = new Student(id,pw,name,ssn);
 				break;
-			case "2":break;
+			case "2":
+				JOptionPane.showMessageDialog(null, stu.toString());
+				break;
 			case "3":break;
 			case "0":return;
 
