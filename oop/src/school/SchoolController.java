@@ -20,11 +20,10 @@ public class SchoolController {
 		while (true) {
 			switch (JOptionPane.showInputDialog("1등록 2조회 0종료")) {
 			case "1":
-				String id = JOptionPane.showInputDialog("ID");
-				String pw = JOptionPane.showInputDialog("PW");
-				String name = JOptionPane.showInputDialog("이름");
-				String ssn = JOptionPane.showInputDialog("주민번호");
-				stu = new Student(id,pw,name,ssn);
+				stu = new Student(JOptionPane.showInputDialog("ID"),
+						JOptionPane.showInputDialog("PW"),
+						JOptionPane.showInputDialog("이름"),
+						JOptionPane.showInputDialog("주민번호"));
 				break;
 			case "2":
 				JOptionPane.showMessageDialog(null, stu.toString());
