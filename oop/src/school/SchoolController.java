@@ -15,12 +15,12 @@ import jdk.nashorn.internal.ir.WhileNode;
 */
 public class SchoolController {
 	public static void main(String[] args) { // String[] params
-		
-		Student stu = null;
+		StudentService serice = new StudentServiceImpl();
+		StudentBean stu = null;
 		while (true) {
-			switch (JOptionPane.showInputDialog("1등록 2조회 0종료")) {
+			switch (JOptionPane.showInputDialog("1등록 2보기 3수정 4삭제 0종료")) {
 			case "1":
-				stu = new Student(JOptionPane.showInputDialog("ID"),
+				stu = new StudentBean(JOptionPane.showInputDialog("ID"),
 						JOptionPane.showInputDialog("PW"),
 						JOptionPane.showInputDialog("이름"),
 						JOptionPane.showInputDialog("주민번호"));
@@ -28,9 +28,14 @@ public class SchoolController {
 			case "2":
 				JOptionPane.showMessageDialog(null, stu.toString());
 				break;
-			case "3":break;
-			case "0":return;
-
+			case "3":
+				
+				break;
+			case "4":
+				
+				break;
+			case "0":
+				return;
 			default:
 				break;
 			}

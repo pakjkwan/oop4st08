@@ -12,12 +12,12 @@ import java.text.SimpleDateFormat;
  * @file   :Student.java
  * @story  :
 */
-public class Student {
+public class StudentBean {
 	private String id,pw,name,regDate,gender,ssn; 
 	private int age;
 	
 	
-	public Student(String id,String pw,String name,String ssn) {
+	public StudentBean(String id,String pw,String name,String ssn) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
