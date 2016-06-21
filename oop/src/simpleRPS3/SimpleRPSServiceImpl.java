@@ -1,7 +1,5 @@
 package simpleRPS3;
 
-import java.util.Random;
-
 public class SimpleRPSServiceImpl implements SimpleRPSService{
 	SimpleRPSBean rps = new SimpleRPSBean();
 	@Override
