@@ -2,7 +2,7 @@ package gameRps;
 
 public class RPSBean {
 	private String play,comp;
-	
+	RPS value;
 	public void setPlay(String play){
 		switch (play) {
 		case "1":
