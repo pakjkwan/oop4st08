@@ -1,4 +1,4 @@
-package lotto;
+package lotto2;
 
 /**
  * @date   :2016. 6. 23. 
@@ -18,11 +18,12 @@ public class LottoBean {
 	}
 
 	public int getNumber() {
+		this.setMoney(money);
 		return number;
 	}
 
 	public void setNumber() {
-		this.number = (int) (Math.random()*45+1);  // 로또를 구성하는 램덤 숫자 하나 발생
+		this.number = (int) (Math.random()*45)+1;  // 로또를 구성하는 램덤 숫자 하나 발생
 	}
 
 	@Override
