@@ -18,8 +18,13 @@ public class Zigzag {
 					k++;
 				}
 			} else {
+				for (j = 4; j >= 0; j--) {
+					mtx[i][j] = k;
+					k++;
+				}
 				// 여기를 채우시오(for-loop)
 			}
+			flag *= -1;
 			// 여기를 채우시오 (flag 값 방향전환)
 		}
 		for (i = 0; i < 5; i++) {
