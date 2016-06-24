@@ -15,7 +15,8 @@ public class LottoBallServiceImpl implements LottoBallService{
 		this.lotto = new int[6];
 	}
 	@Override
-	public void setLottoBall(LottoBean lot) {
+	public void setLottoBall() {
+		LottoBean lot = new LottoBean();
 		for (int i = 0; i < lotto.length; i++) {
 			lotto[i] = 0;
 		}

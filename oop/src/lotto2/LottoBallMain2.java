@@ -17,7 +17,7 @@ public class LottoBallMain2 {
 
 		LottoBean lot = new LottoBean();
 		LottoBallService service = new LottoBallServiceImpl();
-		service.setLottoBall(lot);
+		service.setLottoBall();
 		int[] lotto = service.getLottoBall();
 		for (int i = 0; i < lotto.length; i++) {
 			System.out.print(lotto[i]+"\t");
