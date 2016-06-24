@@ -1,5 +1,7 @@
 package lotto2;
 
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +20,7 @@ public class LottoMain {
 		int[][] lottos = service.getLottos();
 		for (int i = 0; i < lottos.length; i++) {
 		//	service.sort(lottos[i]);
+			Arrays.sort(lottos[i]);
 			for (int j = 0; j < lottos[i].length; j++) {
 				
 				System.out.print(lottos[i][j]+"\t");

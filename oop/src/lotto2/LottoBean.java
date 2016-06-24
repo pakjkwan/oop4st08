@@ -18,7 +18,6 @@ public class LottoBean {
 	}
 
 	public int getNumber() {
-		this.setMoney(money);
 		return number;
 	}
 
