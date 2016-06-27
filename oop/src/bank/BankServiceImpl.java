@@ -59,11 +59,7 @@ public class BankServiceImpl implements BankService{
 		return list.size();
 	}
 
-	@Override
-	public void showAccount() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public void updateAccount() {
@@ -72,9 +68,11 @@ public class BankServiceImpl implements BankService{
 	}
 
 	@Override
-	public void deleteAccount() {
+	public String deleteAccount(String accNo) {
 		// TODO Auto-generated method stub
+		AccountBean a = this.findByAccountNo(accNo);
 		
+		return "";
 	}
 
 }

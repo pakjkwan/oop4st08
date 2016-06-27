@@ -14,10 +14,8 @@ public interface BankService {
 	public List<AccountBean> findByName(String name);
 	// READ : 15조회(전체통장수)
 	public int count();
-	// READ : 16통장내역
-	public void showAccount();
-	// UPDATE : 17.수정 .. 사용자의 요청에 의해 비번만 전환가능
+	// UPDATE : 16.수정 .. 사용자의 요청에 의해 비번만 전환가능
 	public void updateAccount();
-	// DELETE : 8해지
-	public void deleteAccount();
+	// DELETE : 17해지
+	public String deleteAccount(String accNo);
 }
