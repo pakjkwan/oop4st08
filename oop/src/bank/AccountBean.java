@@ -35,13 +35,30 @@ public class AccountBean {
 		this.pw = pw;
 	}
 	
+	
+	
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setAccountNo() {
+		this.accountNo = (int) (Math.random() * 999999)+100000; 
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public void setMoney(int money){
 		this.money = money;
 	}
 	
-	public void setPW(String pw){
-		this.pw = pw;
-	}
 	public int getAccountNo(){
 		return this.accountNo;
 	} 
