@@ -35,8 +35,6 @@ public class AccountBean {
 		this.pw = pw;
 	}
 	
-	
-	
 	public String getPw() {
 		return pw;
 	}
@@ -51,6 +49,9 @@ public class AccountBean {
 	}
 	public void setAccountNo() {
 		this.accountNo = (int) (Math.random() * 999999)+100000; 
+	}
+	public void setAcountNo(int accountNo){
+		this.accountNo = accountNo;
 	}
 	public void setName(String name) {
 		this.name = name;
@@ -69,12 +70,7 @@ public class AccountBean {
 		return this.money;
 	}
 	
-	public String getID(){
-		return this.id;
-	}
-	public String getPW(){
-		return pw;
-	}
+	
 	
 	@Override 
 	public String toString() { // 메소드 오버라이딩

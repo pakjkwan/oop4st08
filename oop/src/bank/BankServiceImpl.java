@@ -20,7 +20,7 @@ public class BankServiceImpl implements BankService{
 	@Override
 	public List<AccountBean> accountList() {
 		// TODO Auto-generated method stub
-		return null;
+		return list;
 	}
 
 	@Override
@@ -43,14 +43,22 @@ public class BankServiceImpl implements BankService{
 			}
 		}
 		 * */
+		System.out.println("리턴직전 계좌:"+acc);
 		return acc;
 		
 	}
 
 	@Override
 	public List<AccountBean> findByName(String name) {
+		List<AccountBean> list = new ArrayList<AccountBean>();
+		System.out.println("컨트롤러에서 넘어온 이름:"+name);
+		for (int i = 0; i < this.list.size(); i++) {
+			if (name.equals(this.list.get(i).getName())) {
+				list.add(this.list.get(i));
+			}
+		}
 		// TODO Auto-generated method stub
-		return null;
+		return list;
 	}
 
 	@Override
@@ -62,14 +70,23 @@ public class BankServiceImpl implements BankService{
 	
 
 	@Override
-	public void updateAccount() {
-		// TODO Auto-generated method stub
-		
+	public String updateAccount(AccountBean acc) {
+		// 15
+		System.out.println("넘어온 수정정보:"+acc);
+		String result = "";
+		AccountBean temp = this.findByAccountNo(String.valueOf(acc.getAccountNo()));
+		if (temp.getId()==null) {
+			result = "계좌번호가 존재하지 않습니다";
+		} else {
+			temp.setPw(acc.getPw());
+			result = "비밀번호가 변경되었습니다";
+		}
+		return result;
 	}
 
 	@Override
 	public String deleteAccount(String accNo) {
-		// TODO Auto-generated method stub
+		// 16
 		AccountBean a = this.findByAccountNo(accNo);
 		
 		return "";
