@@ -2,13 +2,14 @@ package bank;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class BankServiceImpl implements BankService{
 	
 	List<AccountBean> list;
 
 	public BankServiceImpl() {
-		list = new ArrayList<AccountBean>();
+		list = new Vector<AccountBean>();
 	}
 	
 	@Override
@@ -87,9 +88,15 @@ public class BankServiceImpl implements BankService{
 	@Override
 	public String deleteAccount(String accNo) {
 		// 16
-		AccountBean a = this.findByAccountNo(accNo);
-		
-		return "";
+		String result = "";
+		AccountBean temp = this.findByAccountNo(accNo);
+		if (temp.getId()==null) {
+			result = "계좌번호가 존재하지 않습니다";
+		} else {
+			list.remove(temp);
+			result = "비밀번호가 변경되었습니다";
+		}
+		return result;
 	}
 
 }
